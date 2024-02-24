@@ -9,14 +9,13 @@ int main(int argc,char *argv[]){
     if(argc<=1){
         cout << "Please input numbers to find average.";
     }else {
-        for(int i=1;i<argc;i++){
-        sum += atoi(argv[i]);
+        for(int i=1;i<argc;i++){ // atoi(argv[0]) = 0 so i = 0 works too!
+        sum += atoi(argv[i]); 
         }
     avg = sum/(argc-1);
     cout << "---------------------------------" << endl;
     cout << "Average of " << argc-1 << " numbers = " << avg << endl;
     cout << "---------------------------------" << endl;
     }
-    cout << atoi(argv[0]);
     return 0;
 }
